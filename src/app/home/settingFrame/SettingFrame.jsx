@@ -10,12 +10,10 @@ import Image from 'next/image';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
-const SettingFrame = () => {
+const SettingFrame = ({paragraphFont,setParagraphFont}) => {
     const [isOpen, setIsOpen] = useState(true);
-    const [paragraphFont, setParagraphFont] = useState(19);
     const [isChecked, setIsChecked] = useState(false);
 
-    console.log(isChecked);
 
 
     const handleChange = (event, newValue) => {

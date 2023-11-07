@@ -18,7 +18,10 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: white)
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
+}
+
+
+.no-scrollbar::-webkit-scrollbar { 
+  display: none;
 }

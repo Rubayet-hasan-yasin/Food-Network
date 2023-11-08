@@ -5,14 +5,30 @@ import frame from '@/app/assets/header/Frame.svg'
 import { FruitsAndVegetables } from '@/app/fakeData/Data';
 import FruitsList from '@/app/components/Fruits List/FruitsList';
 
-const MainBar = () => {
+const MainBar = ({setIsMainBarOpen=null,isMainBarOpen=null}) => {
     const [toggle, setToggle] = useState(false);
     const [items, setItems] = useState(FruitsAndVegetables);
     const [active, setActive] = useState(1);
+    const [className, setClassName] = useState('');
+
+
+    useEffect(()=>{
+
+        if(!isMainBarOpen){
+            const timer = setTimeout(() => {
+                setClassName(" hidden lg:block")
+            }, 200);
+        }
+        else{
+                setClassName(" ")
+        }
+
+    },[isMainBarOpen])
+
 
 
     return (
-        <div className="bg-white w-[16%] h-[830px] rounded-2xl 2xl:p-[15px] p-[10px]">
+        <div className={`md:sticky top-0 bg-white w-4/5 xl:w-[16%] h-screen rounded-2xl 2xl:p-[15px] p-[10px] duration-700 ` + className}>
             {/* toggle section */}
             <div className="flex border-2 rounded-lg justify-between items-center p-1">
                 <div
@@ -46,12 +62,13 @@ const MainBar = () => {
 
             {/* Fruits List */}
 
-            <div className="h-[680px]">
+            <div className="h-[calc(100vh-148px)]">
                 <p className="text-xs font-medium text-gray-800">Fruits List</p>
 
                 <div className="h-full overflow-y-scroll no-scrollbar select-none">
                     {
                         items.map(item => <FruitsList
+                            setIsMainBarOpen={setIsMainBarOpen}
                             key={item.id}
                             item={item}
                             active={active}

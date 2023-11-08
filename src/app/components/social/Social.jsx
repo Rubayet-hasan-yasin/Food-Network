@@ -7,7 +7,7 @@ import twitter from '@/app/assets/social/twitter.png'
 
 const Social = () => {
     return (
-        <div className='flex flex-col gap-6 pt-16 bg-white w-7 h-full'>
+        <div className='flex md:flex-col gap-6 pt-16 bg-white md:w-7 h-full'>
             <Image src={facebook} alt='fb' />
             <Image src={linkedin} alt='in' />
             <Image src={twitter} alt='tw' />

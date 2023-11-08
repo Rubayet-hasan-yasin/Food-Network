@@ -1,6 +1,10 @@
 import Oranges from '@/app/assets/main bar/Oranges.png';
 import Apples from '@/app/assets/main bar/Apples.png';
 import Avocado from '@/app/assets/main bar/Avocado.png';
+import broccoli from '@/app/assets/main bar/broccoli.png';
+import iceberg_Lettuce from '@/app/assets/main bar/Iceberg Lettuce.png';
+import lettuce from '@/app/assets/main bar/Lettuce.png';
+import peas from '@/app/assets/main bar/peas.png';
 
 
 
@@ -31,7 +35,7 @@ export const FruitsAndVegetables = [
         "name": "Strawberries",
         "category": "Fruits",
         "vitamin": "C",
-        "image": Avocado
+        "image": Apples
     },
     {
         "id": 5 ,
@@ -45,7 +49,7 @@ export const FruitsAndVegetables = [
         "name": "Blueberries",
         "category": "Fruits",
         "vitamin": "C, K",
-        "image": Avocado
+        "image": Apples
     },
     {
         "id": 7 ,
@@ -59,7 +63,7 @@ export const FruitsAndVegetables = [
         "name": "Pineapples",
         "category": "Fruits",
         "vitamin": "C",
-        "image": Avocado
+        "image": Apples
     },
     {
         "id": 9 ,
@@ -73,7 +77,7 @@ export const FruitsAndVegetables = [
         "name": "Pineapples",
         "category": "Fruits",
         "vitamin": "C",
-        "image": Avocado
+        "image": Apples
     },
     {
         "id": 11 ,
@@ -87,13 +91,104 @@ export const FruitsAndVegetables = [
         "name": "Pineapples",
         "category": "Fruits",
         "vitamin": "C",
-        "image": Avocado
+        "image": Apples
     },
     {
         "id": 13 ,
         "name": "Pineapples",
         "category": "Fruits",
-        "vitamin": "x",
+        "vitamin": "k",
         "image": Avocado
     },
+    {
+        "id": 14,
+        "name": "Carrots",
+        "category": "Vegetables",
+        "vitamin": "A",
+        "image": broccoli
+    },
+    {
+        "id": 15,
+        "name": "Broccoli",
+        "category": "Vegetables",
+        "vitamin": "C",
+        "image": iceberg_Lettuce
+    },
+    {
+        "id": 16,
+        "name": "Spinach",
+        "category": "Vegetables",
+        "vitamin": "K",
+        "image": lettuce
+    },
+    {
+        "id": 17,
+        "name": "Tomatoes",
+        "category": "Vegetables",
+        "vitamin": "C",
+        "image": peas
+    },
+    {
+        "id": 18,
+        "name": "Bell Peppers",
+        "category": "Vegetables",
+        "vitamin": "C",
+        "image": broccoli
+    },
+    {
+        "id": 19,
+        "name": "Cucumbers",
+        "category": "Vegetables",
+        "vitamin": "K",
+        "image": iceberg_Lettuce
+    },
+    {
+        "id": 20,
+        "name": "Zucchini",
+        "category": "Vegetables",
+        "vitamin": "C",
+        "image": lettuce
+    },
+    {
+        "id": 21,
+        "name": "Potatoes",
+        "category": "Vegetables",
+        "vitamin": "C",
+        "image": peas
+    },
+    {
+        "id": 22,
+        "name": "Onions",
+        "category": "Vegetables",
+        "vitamin": "C",
+        "image": broccoli
+    },
+    {
+        "id": 23,
+        "name": "Cauliflower",
+        "category": "Vegetables",
+        "vitamin": "C",
+        "image": iceberg_Lettuce
+    },
+    {
+        "id": 24,
+        "name": "Eggplant",
+        "category": "Vegetables",
+        "vitamin": "K",
+        "image": lettuce
+    },
+    {
+        "id": 25,
+        "name": "Green Beans",
+        "category": "Vegetables",
+        "vitamin": "K",
+        "image": peas
+    },
+    {
+        "id": 26,
+        "name": "Mushrooms",
+        "category": "Vegetables",
+        "vitamin": "D",
+        "image": broccoli
+    }
 ]

@@ -12,37 +12,37 @@ const SideNavbar = ({ children }) => {
         <main className="min-h-screen">
 
             {/* sidebar  */}
-            <aside className="w-[70px] h-screen bg-white flex flex-col items-center justify-center gap-[6%] fixed top-0">
+            <aside className="w-[70px] hidden lg:flex h-screen bg-white flex-col items-center justify-center gap-[6%] fixed top-0">
                 {/* home*/}
-                <Link href={'/home'}>
+                <Link href={'/'}>
                     <div className="border w-9 h-9 flex justify-center items-center rounded-md border-[#fcc6b0] bg-[#ffded1]">
                         <Image src={home} alt='home' width={22} height={22} />
                     </div>
                 </Link>
 
                 {/* dashboard */}
-                <Link href={'/home'}>
+                <Link href={'/dashboard'}>
                     <div className="w-9 h-9 flex justify-center items-center rounded-md bg-[#1010100d]">
                         <Image src={dashboard} alt='home' width={22} height={22} />
                     </div>
                 </Link>
 
                 {/* frame  */}
-                <Link href={'/home'}>
+                <Link href={'/massage'}>
                     <div className="w-9 h-9 flex justify-center items-center rounded-md bg-[#1010100d]">
                         <Image src={frame} alt='home' width={22} height={22} />
                     </div>
                 </Link>
 
                 {/* video replay */}
-                <Link href={'/home'}>
+                <Link href={'/replay'}>
                     <div className="w-9 h-9 flex justify-center items-center rounded-md bg-[#1010100d]">
                         <Image src={replay} alt='home' width={22} height={22} />
                     </div>
                 </Link>
 
                 {/* more  */}
-                <Link href={'/home'}>
+                <Link href={'/more'}>
                     <div className="w-9 h-9 flex justify-center items-center rounded-md bg-[#1010100d]">
                         <Image src={more} alt='home' width={22} height={22} />
                     </div>
@@ -55,6 +55,48 @@ const SideNavbar = ({ children }) => {
 
 
             {children}
+
+
+
+{/* for < 1024px screen  */}
+
+            <aside className="w-full h-16 lg:hidden bg-white flex items-center justify-center gap-[6%] fixed bottom-0 left-0 right-0">
+                {/* home*/}
+                <Link href={'/'}>
+                    <div className="border w-9 h-9 flex justify-center items-center rounded-md border-[#fcc6b0] bg-[#ffded1]">
+                        <Image src={home} alt='home' width={22} height={22} />
+                    </div>
+                </Link>
+
+                {/* dashboard */}
+                <Link href={'/dashboard'}>
+                    <div className="w-9 h-9 flex justify-center items-center rounded-md bg-[#1010100d]">
+                        <Image src={dashboard} alt='home' width={22} height={22} />
+                    </div>
+                </Link>
+
+                {/* frame  */}
+                <Link href={'/massage'}>
+                    <div className="w-9 h-9 flex justify-center items-center rounded-md bg-[#1010100d]">
+                        <Image src={frame} alt='home' width={22} height={22} />
+                    </div>
+                </Link>
+
+                {/* video replay */}
+                <Link href={'/replay'}>
+                    <div className="w-9 h-9 flex justify-center items-center rounded-md bg-[#1010100d]">
+                        <Image src={replay} alt='home' width={22} height={22} />
+                    </div>
+                </Link>
+
+                {/* more  */}
+                <Link href={'/more'}>
+                    <div className="w-9 h-9 flex justify-center items-center rounded-md bg-[#1010100d]">
+                        <Image src={more} alt='home' width={22} height={22} />
+                    </div>
+                </Link>
+
+            </aside>
 
         </main>
     );

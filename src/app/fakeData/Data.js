@@ -8,7 +8,7 @@ import peas from '@/app/assets/main bar/peas.png';
 
 
 
-export const FruitsAndVegetables = [
+export const fruitsAndVegetables = [
     {
         "id": 1,
         "name": "Oranges",

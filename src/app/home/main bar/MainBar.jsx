@@ -2,20 +2,20 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import frame from '@/app/assets/header/Frame.svg'
-import { FruitsAndVegetables } from '@/app/fakeData/Data';
+import { fruitsAndVegetables } from '@/app/fakeData/Data';
 import FruitsList from '@/app/components/Fruits List/FruitsList';
 
-const MainBar = ({setIsMainBarOpen=null,isMainBarOpen=null}) => {
-    const [toggle, setToggle] = useState(false);
-    const [items, setItems] = useState(FruitsAndVegetables);
-    const [active, setActive] = useState(1);
+const MainBar = ({setIsMainBarOpen=null,isMainBarOpen=null, active, setActive}) => {
+    const [items, setItems] = useState([]);
+    
     const [className, setClassName] = useState('');
+    const [toggle, setToggle] = useState("Fruits");
 
 
     useEffect(()=>{
 
         if(!isMainBarOpen){
-            const timer = setTimeout(() => {
+            setTimeout(() => {
                 setClassName(" hidden lg:block")
             }, 200);
         }
@@ -23,7 +23,11 @@ const MainBar = ({setIsMainBarOpen=null,isMainBarOpen=null}) => {
                 setClassName(" ")
         }
 
-    },[isMainBarOpen])
+        const filterdData = fruitsAndVegetables.filter(data=> data.category == toggle);
+
+        setItems(filterdData)
+
+    },[isMainBarOpen, toggle])
 
 
 
@@ -32,13 +36,13 @@ const MainBar = ({setIsMainBarOpen=null,isMainBarOpen=null}) => {
             {/* toggle section */}
             <div className="flex border-2 rounded-lg justify-between items-center p-1">
                 <div
-                    onClick={() => setToggle(false)}
-                    className={"h-9 w-full rounded-md flex justify-center items-center p-1 text-sm cursor-pointer" + " " + (toggle || "bg-[#e655271a]")}>
+                    onClick={() => setToggle("Fruits")}
+                    className={"h-9 w-full rounded-md flex justify-center items-center p-1 text-sm cursor-pointer" + " " + (toggle == "Fruits" && "bg-[#e655271a]")}>
                     <p>Fruits</p>
                 </div>
                 <div
-                    onClick={() => setToggle(true)}
-                    className={"h-9 w-full rounded-md flex justify-center items-center p-1 text-sm cursor-pointer" + " " + (toggle && "bg-[#e655271a]")}>
+                    onClick={() => setToggle("Vegetables")}
+                    className={"h-9 w-full rounded-md flex justify-center items-center p-1 text-sm cursor-pointer" + " " + (toggle == "Vegetables" && "bg-[#e655271a]")}>
                     <p>Vegetables</p>
                 </div>
             </div>

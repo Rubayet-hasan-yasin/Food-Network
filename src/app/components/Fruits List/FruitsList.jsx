@@ -7,7 +7,12 @@ const FruitsList = ({ item, active, setActive, setIsMainBarOpen }) => {
 
     return (
         <div
-            onClick={() => {setActive(item.id); setIsMainBarOpen(false)}}
+            onClick={() => {
+                setActive(item.id); 
+                if(setIsMainBarOpen){
+                    setIsMainBarOpen(false)
+                }
+            }}
             className={`${active == item.id ? "border-opacity-100" : "border-opacity-0"} border-[1.5px] flex gap-3 mt-1 items-center py-2 px-[10px] border-[#E55527]  rounded-lg cursor-pointer`}>
 
                 {/* image background  */}

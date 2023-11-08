@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+
 
 const FruitsList = ({ item, active, setActive, setIsMainBarOpen }) => {
 

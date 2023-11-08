@@ -32,7 +32,7 @@ const MainBar = ({setIsMainBarOpen=null,isMainBarOpen=null, active, setActive}) 
 
 
     return (
-        <div className={`md:sticky top-0 bg-white w-4/5 xl:w-[16%] h-screen rounded-2xl 2xl:p-[15px] p-[10px] duration-700 ` + className}>
+        <div onClick={(e)=> e.stopPropagation()} className={`md:sticky min-w-[200px] top-0 bg-white w-4/5 xl:w-[16%] h-screen rounded-2xl 2xl:p-[15px] p-[10px] duration-700` + className}>
             {/* toggle section */}
             <div className="flex border-2 rounded-lg justify-between items-center p-1">
                 <div

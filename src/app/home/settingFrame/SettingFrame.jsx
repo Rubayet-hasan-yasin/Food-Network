@@ -21,7 +21,7 @@ const SettingFrame = ({paragraphFont,setParagraphFont}) => {
     };
 
     return (
-        <div className="sticky top-0 hidden xl:block bg-white w-[16%] h-fit rounded-2xl p-[15px]">
+        <div className="sticky min-w-[200px] top-0 hidden xl:block bg-white w-[16%] h-fit rounded-2xl p-[15px]">
             <div className="p-[10px] border w-full h-full rounded-lg">
 
                 {/* Settings top part */}

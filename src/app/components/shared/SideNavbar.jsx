@@ -2,7 +2,7 @@
 
 import React from 'react';
 import dashboard from '@/app/assets/sidebar/dashboard-circle.svg'
-import frame from '@/app/assets/sidebar/frame.svg'
+import frame from '../../assets/sidebar/Frame.svg'
 import home from '@/app/assets/sidebar/home-01.svg'
 import more from '@/app/assets/sidebar/more-01.svg'
 import replay from '@/app/assets/sidebar/video-replay.svg'

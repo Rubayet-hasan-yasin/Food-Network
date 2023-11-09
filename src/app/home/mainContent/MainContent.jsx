@@ -46,7 +46,7 @@ const MainContent = ({paragraphFont, active}) => {
                     </div>
                     <div className='w-full'>
                         {content.image1 &&
-                            <Image src={content.image1} alt='img' className='ml-auto'/>
+                            <Image src={content.image1} alt='img' className='ml-auto my-5 md:my-0'/>
                         }
                     </div>
                 </div>

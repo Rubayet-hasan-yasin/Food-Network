@@ -10,9 +10,15 @@ import Image from 'next/image';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
+
+
+
 const SettingFrame = ({paragraphFont,setParagraphFont}) => {
     const [isOpen, setIsOpen] = useState(true);
     const [isChecked, setIsChecked] = useState(false);
+
+
+
 
 
 
@@ -22,7 +28,7 @@ const SettingFrame = ({paragraphFont,setParagraphFont}) => {
 
     return (
         <div className="sticky min-w-[200px] top-0 hidden xl:block bg-white w-[16%] h-fit rounded-2xl p-[15px]">
-            <div className="p-[10px] border w-full h-full rounded-lg">
+            <div className={"p-[10px] border w-full rounded-lg overflow-hidden "+" "+(isOpen? "h-full": "h-10")}>
 
                 {/* Settings top part */}
                 <div className="flex items-center justify-between">
